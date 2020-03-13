@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #CA3C42;
+  font-family: 'Comfortaa', cursive;
+}
+.king-nav{
+  height: 50px;
+}
+
+.b-logo{
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.round{
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  border:1px solid #eeeeee;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.clap-label{
+  font-size: 4em;
+  color: #ffffff;
+}
+
+
+
+.clap-input:focus{
+  color: #ffffff;
+}
+.clap-input::placeholder{
+  color: #ffffff;
+}
+
+.clap-reason{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.clap-submit {
+  width: 250px;
+  padding: 10px;
+  border: 0.5px solid #ffffff; 
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.clap-reason::placeholder{
+  color: #ffffff;
+}
+
+.parent-container {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .clap-input{
+    max-width: 80vw;
+    margin-left: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 4.5rem;
+    color: #ffffff;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .clap-input{
+    max-width: 80vw;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 4rem;
+    color: #ffffff;
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .clap-input{
+    max-width: 80vw;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 4rem;
+    color: #ffffff;
+  }
+  .clap-reason{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .clap-submit{
+    width: 100%;;
+  }
+}
