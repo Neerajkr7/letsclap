@@ -149,9 +149,14 @@ body{
     background-color: transparent;
     outline: none;
     border: none;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ffffff;
   }
+
+.clap-label{
+  font-size: 3em;
+  color: #ffffff;
+}
   .clap-reason{
     margin-top: 10px;
     margin-left: 10px;
