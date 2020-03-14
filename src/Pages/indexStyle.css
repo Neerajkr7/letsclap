@@ -92,7 +92,6 @@ body{
 @media (min-width: 1025px) and (max-width: 1280px) {
   .clap-input{
     max-width: 80vw;
-    margin-left: 20px;
     background-color: transparent;
     outline: none;
     border: none;
