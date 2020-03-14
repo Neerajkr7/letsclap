@@ -50,7 +50,7 @@ const Index = () => {
                 placeholder="Tomy"
                 name="personName"
                 autoFocus
-                autoComplete={false}
+                autoComplete="off"
                 onChange={({ target: { name, value } }) => handleFormChange(name, value)}
               />
             </div>
@@ -58,7 +58,7 @@ const Index = () => {
           <div className="col-md-8">
             <input
               type="text"
-              autoComplete={false}
+              autoComplete="off"
               className="clap-reason"
               placeholder="For his new title"
               name="resonForClap"
