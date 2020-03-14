@@ -8,8 +8,12 @@ const initalState = {
 
 const userReducer = (state = initalState, action) => {
   switch (action.type) {
-    case 'USER_AUTH_REQUEST':
-      return state
+    case 'ADD_EVENT_REQUEST':
+      return { ...state, loader: true }
+    case 'ADD_EVENT_REQUEST_SUCCESS':
+      return { ...state, loader: false }
+    case 'ADD_EVENT_REQUEST_FAILURE':
+      return { ...state, loader: false }
     default:
       return state
   }

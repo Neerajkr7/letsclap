@@ -1,15 +1,25 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import Container from '../Layouts/Container'
+import { addEvent } from '../Redux/Actions/events'
 import UserDP from '../Assets/Images/man.svg'
 
 import './indexStyle.css'
 const Index = () => {
   const [formvalues, setFormValues] = useState({})
+  const dispatch = useDispatch()
+  const userState = useSelector(({ user }) => user)
+  const history = useHistory()
   const handleFormChange = (name, value) => {
     setFormValues({ ...formvalues, [name]: value })
   }
   const handleFormSubmit = () => {
-    console.log({ formvalues })
+    dispatch(addEvent(formvalues))
+      .then(res => {
+        history.push(`/${res._id}`)
+      })
+      .catch(err => console.log(err))
   }
   return (
     <Container>
@@ -49,20 +59,28 @@ const Index = () => {
               type="text"
               className="clap-reason"
               placeholder="For his new title"
-              name="clapReason"
+              name="resonForClap"
               onChange={({ target: { name, value } }) => handleFormChange(name, value)}
             />
           </div>
         </div>
         <div className="row">
+
           <div className="col-md-10 col-sm-12">
-            <input
-              className="clap-submit"
+            <div
+              className={formvalues.personName && formvalues.resonForClap ?
+                'clap-submit' : 'clap-submit clap-submit-disabled'}
               type="submit"
-              value="Let's Celebrate"
-              onClick={() => handleFormSubmit()} />
+              disabled={!formvalues.personName || !formvalues.resonForClap}
+              onClick={() => handleFormSubmit()} >
+              {userState.loader ?
+                <div className="spinner-border text-light" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div> : 'Lets Celebrate'}
+            </div>
           </div>
         </div>
+        {/* <SocialIcons /> */}
       </div>
     </Container>
   )

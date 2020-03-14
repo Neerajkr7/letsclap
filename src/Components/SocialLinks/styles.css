@@ -1,0 +1,39 @@
+path{
+  fill: #ffffff;
+}
+
+.round{
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  border:1px solid #eeeeee;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.overview-label{
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.social-wrapper{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a{
+  outline: none;
+}
+
+
+svg{
+  width: 50px;
+}
+
+
+.invitation-label{
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+}
