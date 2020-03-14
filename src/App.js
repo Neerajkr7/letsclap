@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/:id" component={OverviewPage} />
+          <Route exact path="/invite/:id" component={OverviewPage} />
         </Switch>
       </Router>
     </Provider>

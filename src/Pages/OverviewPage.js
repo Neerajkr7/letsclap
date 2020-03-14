@@ -1,9 +1,11 @@
 import React from 'react'
 import Container from '../Layouts/Container'
+import { useParams } from 'react-router-dom'
 import UserDP from '../Assets/Images/man.svg'
 import Socials from '../Components/SocialLinks'
 
 const OverViewPage = (props) => {
+  const { id } = useParams()
   return (
     <Container>
       <div className="row">
@@ -20,10 +22,8 @@ const OverViewPage = (props) => {
         <div className="col-md-12">
           <h5 className="invitation-label">Lets Invite friends</h5>
         </div>
-        <div className="col-md-12">
-          <Socials />
-        </div>
       </div>
+      <Socials url={id} className="social-wrapper" />
     </Container>
   )
 }

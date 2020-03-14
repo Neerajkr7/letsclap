@@ -17,7 +17,7 @@ const Index = () => {
   const handleFormSubmit = () => {
     dispatch(addEvent(formvalues))
       .then(res => {
-        history.push(`/${res._id}`)
+        history.push(`/invite/${res._id}`)
       })
       .catch(err => console.log(err))
   }

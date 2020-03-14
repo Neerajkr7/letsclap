@@ -17,18 +17,9 @@ path{
   text-align: center;
 }
 
-.social-wrapper{
-  display: flex;
-  justify-content: space-evenly;
-}
 
 a{
   outline: none;
-}
-
-
-svg{
-  width: 50px;
 }
 
 
@@ -36,4 +27,9 @@ svg{
   margin-bottom: 10px;
   text-align: center;
   color: #ffffff;
+}
+
+
+.social-wrapper{
+  margin-top: 20px;
 }
